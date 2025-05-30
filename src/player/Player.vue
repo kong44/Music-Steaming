@@ -201,7 +201,7 @@
         return [
           this.streamTitle || this.track?.title,
           formatArtists(this.track?.artists || []) || this.track?.album,
-          'Airsonic (refix)'
+          'Tantrei-តន្ត្រី'
         ].filter(x => !!x).join(' • ')
       }
     },

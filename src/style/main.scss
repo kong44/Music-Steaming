@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'KantumruyPro';
+  src: url('./Kantumruy_Pro/KantumruyPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $theme-elevation-0: hsl(0, 0%, 0%);
 $theme-elevation-1: hsl(0, 0%, 8%);
 $theme-elevation-2: hsl(0, 0%, 18%);
@@ -118,3 +125,7 @@ a.active {
 
 @import './nav-underlined';
 @import 'bootstrap/scss/bootstrap';
+
+body {
+  font-family: 'KantumruyPro', sans-serif;
+}

@@ -32,6 +32,12 @@
               <span v-show="false" class="spinner-border spinner-border-sm" /> Log in
             </button>
           </form>
+          <div class="mb-3 mt-3 text-center">
+            <p>Want to try a demo?</p>
+            <button class=" btn btn-primary btn-sm" @click="useGuest">
+              Use Guest Account (guest / guest)
+            </button>
+          </div>
         </div>
       </b-overlay>
     </div>
@@ -87,6 +93,21 @@
       }
     },
     methods: {
+      // login() {
+      //   this.error = null
+      //   this.busy = true
+      //   this.auth.loginWithPassword(this.server, this.username, this.password)
+      //     .then(() => {
+      //       this.store.setLoginSuccess(this.username, this.server)
+      //       this.$router.replace(this.returnTo)
+      //     })
+      //     .catch(err => {
+      //       this.error = err
+      //     })
+      //     .finally(() => {
+      //       this.busy = false
+      //     })
+      // }
       login() {
         this.error = null
         this.busy = true
@@ -101,6 +122,12 @@
           .finally(() => {
             this.busy = false
           })
+      },
+      useGuest() {
+        this.username = 'guest'
+        this.password = 'guest'
+        // Optional: auto-login
+        // this.login()
       }
     }
   })
